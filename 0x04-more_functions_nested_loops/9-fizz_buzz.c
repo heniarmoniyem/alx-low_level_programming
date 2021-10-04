@@ -1,40 +1,30 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * main - Prints a Fizz Buzz program
- * Return: 0
+ * main -  prints the numbers from 1 to 100
+ * Return: always 0
  */
+
 int main(void)
 {
-  int x;
+	int h;
+	char fizz[] = "Fizz";
+	char buzz[] = "Buzz";
+	char fibu[] = "FizzBuzz";
 
-  for (x = 1; x <= 100; x++)
-    {
-      if ((x % 3 == 0) && (x % 5 == 0))
+	for (h = 1; h <= 100; h++)
 	{
-	  printf("FizzBuzz");
+		if (h % 3 == 0 && h % 5 != 0)
+			printf(" %s", fizz);
+		else if (h % 5 == 0 && h % 3 != 0)
+			printf(" %s", buzz);
+		else if (h % 3 == 0 && h % 5 == 0)
+			printf(" %s", fibu);
+		else if (h == 1)
+			printf("%d", h);
+		else
+			printf(" %d", h);
 	}
-      else if (x % 3 == 0)
-	{
-	  printf("Fizz");
-	}
-      else if (x % 5 == 0)
-	{
-	  printf("Buzz");
-	}
-      else
-	{
-	  printf("%d", x);
-	}
-
-      if (x != 100)
-	{
-	  printf(" ");
-	}
-    }
-
-  printf("\n");
-
-  return (0);
+	printf("\n");
+	return (0);
 }
