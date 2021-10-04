@@ -1,33 +1,21 @@
 #include "main.h"
 
 /**
- * rev_string - Reverses a string
- * @s: The string to be modified
- *
- * Return: void
+ * more_numbers - prints 10 times the numbers from 0 to 14.
+ * followed by a new line.
  */
-void rev_string(char *s)
+void more_numbers(void)
 {
-	int i, c, k;
-	char *a, aux;
+	int h, g;
 
-	a = s;
-
-	while (s[c] != '\0')
+	for (h = 0; h < 10; h++)
 	{
-		c++;
-	}
-
-	for (k = 1; k < c; k++)
-	{
-		a++;
-	}
-
-	for (i = 0; i < (c / 2); i++)
-	{
-		aux = s[i];
-		s[i] = *a;
-		*a = aux;
-		a--;
+		for (g = 0; g < 15; g++)
+		{
+			if (g >= 10)
+				putchar(g / 10 + '0');
+			putchar(g % 10 + '0');
+		}
+		putchar('\n');
 	}
 }
